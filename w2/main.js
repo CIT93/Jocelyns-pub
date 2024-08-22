@@ -19,5 +19,5 @@
     const myTransportation = 16;
 // 9. Add up your points
     const cfpTotal = myHouseMembers + myHouseSize + myFoodChoice + myWaterConsumption + myHousePurchases + myHouseWaste + myHouseRecycle + myTransportation
-// 10. Write JS to update the rendered html (index.html) with total
-console.log("my Carbon Footprint is"); // 111
+    const myHeadings = document.querySelector("h1");
+    myHeadings.textContent = "111";

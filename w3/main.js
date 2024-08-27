@@ -26,3 +26,5 @@ let carbonFootprintPoints = 0;
 
 determineHouseholdPts(3);
 determineHouseholdPts(4);
+
+// i forgot to commit when i setup for week 3 and now im trying to commit for functions

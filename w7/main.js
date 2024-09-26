@@ -1,5 +1,5 @@
 import { renderTbl } from "./render.js";
-import {determineHouseSizePts,determineHouseholdPts} from "./carbonFootPrint.js";
+import { determineHouseSizePts,determineHouseholdPts } from "./carbonFootPrint.js";
 
 const FORM = document.getElementById("form");
 const OUTPUT = document.getElementById("output");

@@ -1,4 +1,4 @@
-export function determineHouseSizePts(size) {
+function determineHouseSizePts(size) {
     let houseSizePoints = 0;
     if (size === "large") {
         houseSizePoints = 10;
@@ -12,7 +12,7 @@ export function determineHouseSizePts(size) {
     return houseSizePoints;
 }
 
-export function determineHouseholdPts(numberInHousehold) {
+function determineHouseholdPts(numberInHousehold) {
     let houseHoldPoints = 0;
     if (numberInHousehold === 1) {
         houseHoldPoints = 14;
@@ -31,3 +31,4 @@ export function determineHouseholdPts(numberInHousehold) {
     }
     return houseHoldPoints;
 }
+export {determineHouseholdPts, determineHouseSizePts};

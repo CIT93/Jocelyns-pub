@@ -4,7 +4,7 @@ import { determineHouseSizePts,determineHouseholdPts } from "./carbonFootPrint.j
 const FORM = document.getElementById("form");
 const OUTPUT = document.getElementById("output");
 const cfpData = [];
-const tbody = document.getElementById("output");
+
 
 
 
@@ -37,4 +37,4 @@ FORM.addEventListener("submit", function (e) {
   FORM.reset();
 });
 
-// pushing one more time
+

@@ -28,39 +28,17 @@ function renderTblBtn(obj,index,data){
   td.appendChild(btnEdit);
   td.appendChild(btnDel);
   btnDel.addEventListener('click', function(e){
-    console.log('Hello from inside the delete button');
-     console.log(e);
-     data.splice(index, 1); 
+    data.splice(index, 1); 
      renderTbl(data);
   });
 
   btnEdit.addEventListener('click', function (e) {
-    
-    if (obj.firstName !== undefined) {
-        FORM.elements['firstname'].value = obj.firstName;
-    } else {
-        FORM.elements['firstname'].value = ''; 
-    }
-
-    if (obj.lastName !== undefined) {
-        FORM.elements['lastname'].value = obj.lastName;
-    } else {
-        FORM.elements['lastname'].value = '';
-    }
-
-    if (obj.houseM !== undefined) {
-        FORM.elements['housem'].value = obj.houseM;
-    } else {
-        FORM.elements['housem'].value = '';
-    }
-
-    if (obj.houseS !== undefined) {
-        FORM.elements['houses'].value = obj.houseS;
-    } else {
-        FORM.elements['houses'].value = '';
-    }
-
-    
+    FORM[1].value=obj.firstName;
+    FORM[2].value=obj.lastNme;
+    FORM[3].value=obj.houseM;
+    FORM[4].value=obj.houseS;
+    data.splice(index,1);
+    renderTbl(data);   
      
 });
 return td;
@@ -78,7 +56,7 @@ function renderTblBody(data) {
         tr.appendChild(td);
       }
     }
-   const td = renderTblBtn(obj,index,data);
+   const td = renderTblBtn(obj, index, data);
     tr.appendChild(td);
     tbody.appendChild(tr);
     
@@ -93,11 +71,9 @@ function renderTbl(data) {
   const tbody = renderTblBody(data);
   table.appendChild(tbody);
   TBL.appendChild(table);
-  } else {
-    const message = document.createElement("p");
-    message.textContent = "No data avaialable.";
-    TBL.appendChild(message);
+  } 
+   
   }
-}
 
-export { renderTbl,renderTblHeading };
+
+export { renderTbl};

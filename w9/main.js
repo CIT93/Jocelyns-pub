@@ -3,7 +3,9 @@ import { determineHouseholdPts,determineHouseSizePts } from "./carbonFootprint.j
 import { FORM } from "./global.js";
 import { saveLS, cfpData} from "./storage.js";
 
-
+const firstNameEl = document.getElementById('firstName');
+const lastNameEl = document.getElementById('lastName');
+const submitEl = document.getElementById("submitError");
 
  
 function start(firstName, lastNme, houseHoldMembers, houseSize) {
@@ -22,7 +24,7 @@ function start(firstName, lastNme, houseHoldMembers, houseSize) {
 }
 renderTbl(cfpData);
 
-const validateField = event => {
+function validateField(event) {
   const field = event.target.value;
   const fieldId = event.target.id;
   const fieldError = document.getElementById(`${fieldId}Error`);
@@ -37,23 +39,25 @@ const validateField = event => {
 };
 
 
-document.getElementById('firstName').addEventListener('blur', validateField);
-document.getElementById('lastName').addEventListener('blur', validateField);
+firstNameEl.addEventListener('blur', validateField);
+lastNameEl.addEventListener('blur', validateField);
  
 FORM.addEventListener('submit', function (e) {
   e.preventDefault();
-  const firstName = document.getElementById('firstName').value;
-  const lastNme = document.getElementById('lastName').value;
-  const firstNameIsValid = document.getElementById('firstName').value !== '';
-  const lastNmeIsValid = document.getElementById('lastName').value !== '';
-  if (firstNameIsValid && lastNmeIsValid) {
-  alert('Form is valid. You can proceed with submitting the form to the server.');
+  const firstName = FORM.firstname.value;
+  const lastNme = FORM.lastname.value;
+  const firstNameIsValid = firstNameEl.value !== '';
+  const lastNmeIsValid = lastNameEl.value !== '';
+   if (firstNameIsValid && lastNmeIsValid) {
+    submitEl.textContent = '';
     const houseHoldMembers = parseInt(FORM.housem.value);
     const houseSize = FORM.houses.value;
     start(firstName, lastNme, houseHoldMembers, houseSize);
     saveLS(cfpData);
     renderTbl(cfpData);
     FORM.reset();
+   } else {
+   submitEl.textContent = "Form requires first and last name";
    }
    
 });

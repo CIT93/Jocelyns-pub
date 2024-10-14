@@ -13,14 +13,14 @@
         <legend>Calculating Your Carbon Footprint Points</legend>
         
         <div>
-          <label for="firstName">First Name:</label>
-          <input type="text" id="firstName">
-          <span id="firstNameError" class="error" role="alert"></span>
+          <label>First Name:</label>
+          <input type="text" name="firstname" id="firstName" maxlength="25"/>
+          <span id="firstNameError" class="error"></span>
       </div>
       <div>
-          <label for="lastName">Last Name:</label>
-          <input type="text" id="lastName">
-          <span id="lastNameError" class="error" role="alert"></span>
+          <label>Last Name:</label>
+          <input type="text" name="lastname" id="lastName" maxlength="25" />
+          <span id="lastNameError" class="error"></span>
       </div>
 
 
@@ -43,7 +43,8 @@
 
         
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button><br>
+        <span id = "submitError" class="error"></span>
       </fieldset>
      
     </form>

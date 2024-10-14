@@ -23,3 +23,6 @@ html {
   .error {
     color: red;
 }
+  .invalid{
+    border-color: red;
+  }

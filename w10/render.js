@@ -70,7 +70,7 @@ const renderTblBody = (data) => {
   return tbody;
 }
 
-const renderTbl = (data = []) => {
+const renderTbl = data  => {
   TBL.innerHTML = "";
   if (data.length !==0){
     const table = renderTblHeading();

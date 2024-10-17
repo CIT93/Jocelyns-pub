@@ -12,7 +12,7 @@ const determineHouseSizePts = (size) =>{
     return houseSizePoints;
 }
 
-const  determineHouseholdPts = (numberInHousehold) =>{
+const  determineHouseholdPts = (numberInHousehold ) =>{
     let houseHoldPoints = 0;
     if (numberInHousehold === 1) {
         houseHoldPoints = 14;

@@ -76,27 +76,27 @@ FORM.addEventListener('submit',e =>{
    }
    
 });
-// rest operator
-//const add2 = function(...a){
-  //return 2 + a[3];
+ 
+//rest operator
 
-//}
+// const add2 = function (...a) {
+//   return 2 + a[3];
+// }
 
-//const result = add2(1, 2, 3, 4);
-
-//arrow function
-
-const add2 = (a) => {
-  return 2 + a;
-
-}
-const result = add2(100); 
+// const result = add2(1, 2, 3, 4);
 
 
-// IIFE
-const a = 3
+
+// arrow function
+const add2 = a => 2 + a;
+
+const result = add2(100);
+
+//IIFE
+
+const a = 3;
 
 (function(a){
-  console.log("inside IIFE")
-  console.log(a);
+    console.log("inside the function");
+    console.log(a);
 })(a);

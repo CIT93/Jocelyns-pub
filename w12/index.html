@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async workout</title>
+    <script type="module"src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="form">
+        <fieldset>
+            <legend>Async workout</legend>
+            <div>
+                <label for="">Type of Exercise:</label>
+                <select name="exercise" id="typeOfExercise" required>
+                  <option value="">---What type of exercise?---</option>
+                  <option value="jumping jacks">Jumping Jacks</option>
+                  <option value="pull ups">Pull-ups</option>
+                  <option value="deadlift">Deadlift</option>
+                </select>
+              </div>
+        
+              <div>
+                <label for="">Target number of reps:</label>
+                <input type="number" name="reps" id="reps" min="1" max="7" required />
+              </div>
+        
+              <div>
+                <label for="">Time in Minutes:</label>
+                <input type="number" name="time" id="time" min="1" max="5" required />
+              </div>
+        
+            <button type="submit">Let's Begin!</button>
+        
+            </fieldset>
+        
+            </form>
+            <div id="output"></div>
+            <h2 id="message">Ready, Set, Go!</h2>
+</body>
+</html>

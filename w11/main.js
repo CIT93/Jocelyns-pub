@@ -37,6 +37,7 @@ const start = (... i  ) =>{
     foodChoice:i[4],
     houseMPTS: houseHoldPTS,
     houseSPTS: houseSizePTS,
+    foodChoicePoints: foodChoicePoints,
     cfpTotal: total,
   });
 }

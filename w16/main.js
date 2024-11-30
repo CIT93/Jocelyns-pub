@@ -69,6 +69,8 @@ FORM.addEventListener("submit", (e) => {
   e.preventDefault();
   if (FNAME.value !== "" && LNAME.value !== "") {
     SUBMIT.textContent = "";
+
+    const hasBothAppliances = e.target.hasBothAppliances.checked;
     //start(FNAME.value, LNAME.value, parseInt (FORM.housem.value), FORM.houses.value);
     const fpObj = new FP(
       FNAME.value,
@@ -77,7 +79,8 @@ FORM.addEventListener("submit", (e) => {
       e.target.houses.value,
       e.target.foodChoice.value,
       e.target.foodSource.value,
-     parseInt(e.target.water.value)
+     parseInt(e.target.water.value),
+     hasBothAppliances
     );
     //  fpObj.houseHoldPoints();
     //  fpObj.houseSizePoints();

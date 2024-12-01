@@ -42,7 +42,7 @@
             </select>
 
             <label>Evaluate your food choices</label>
-            <select name="foodChoice" required>
+            <select name="food" required>
                 <option value="">---Types of food---</option>
                 <option value="Domestic meat daily basis">Domestic meat daily basis</option>
                 <option value="Domestic meat few times per week">Domestic meat few times per week</option>
@@ -64,7 +64,7 @@
         
        <div> 
           <label>Water consumption</label>
-          <select name="water" required>
+          <select name="water" id="water" required>
             <option value="">---How many times do you run your dishwasher or washing machine---</option>
             <option value="3">More than 9 times per week</option>
             <option value="2">Between 4 to 9 times per week</option>
@@ -72,22 +72,25 @@
             <option value="0">Don't have a dishwasher</option>
 
           </select>
+          <br>
+          <label for="dish_washer">Do you have both a dishwasher and washing machine?</label>
+          <input type="checkbox" name="dish_washer" id="both" checked >
         </div>
+
         <div>
-          <label>Do you have both a dishwasher and washing machine?</label>
-          <input type="checkbox" name="hasBothAppliances" id="hasBothAppliances">
-        </div>
-        <div>
-          <label>How many new household items do you purchase per year?</label>
-          <select name="householdPurchases" id="householdPurchases" required>
-            <option value="">---How many items purchased---</option>
-            <option value="10">More than 7 items</option>
-            <option value="8">Between 5 to 7 items</option>
-            <option value="6">Between 3 to 5 items</option>
-            <option value="4">Less than 3 items</option>
-            <option value="2">Almost nothing or secondhand items</option>
-          </select>
-        </div>
+                <p>Household purchases are new pieces of furniture, electronics, or other household gadgets per year</p>
+                <label>Determine how many household purchases you make each year</label>
+                <select name="purchases" required>
+                    <option value="">---Yearly Purchases---</option>
+                    <option value="10">More than 7 new pieces</option>
+                    <option value="8">Between 5 and 7 items</option>
+                    <option value="6">Between 3 and 5 items</option>
+                    <option value="4">Less than 3 items</option>
+                    <option value="2">Almost nothing or only secondhand items</option>
+                </select>
+            </div>
+
+
         <button type="submit">Submit</button><br>
         <span id = "submitError" class="error"></span>
       </fieldset>

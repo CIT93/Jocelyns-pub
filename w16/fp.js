@@ -1,14 +1,15 @@
 class FP {
-  constructor(first, last, houseMembers, houseSize,foodChoice,foodSource,waterConsum,hasBothAppliances,householdPurchases) {
+  constructor(first, last, houseMembers, houseSize,foodChoice,foodSource,waterValue,waterConsum,both,purchases) {
     this.first = first;
     this.last = last;
     this.houseMembers = houseMembers;
     this.houseSize = houseSize;
     this.foodChoice = foodChoice;
     this.foodSource = foodSource; 
+    this.waterValue = waterValue;
     this.waterConsumPoints = waterConsum;
-    this.appliancePoints = this.calculateAppliancePoints(hasBothAppliances);
-    this.householdPurchasesPoints = this.calculateHouseholdPurchasesPoints(householdPurchases);
+    this.both = both;
+    this.purchasesPoints = purchases;
     this.calHouseHoldPoints();
     this.calHouseSizePoints(); 
     this.calFoodChoicePoints();
@@ -16,13 +17,7 @@ class FP {
     this.calTotal(); 
     
   }
-  calculateAppliancePoints(hasBothAppliances){
-    let appliancePoints = 0;
-    if(hasBothAppliances) {
-      appliancePoints = 2;
-    }
-    return appliancePoints;
-  }
+
 
 
   calculateHouseholdPurchasesPoints(purchases) {
@@ -99,8 +94,7 @@ calFoodSourcePoints(){
        this.foodChoicePoints +
        this.foodSourcePoints +
        this.waterConsumPoints+
-       this.appliancePoints+
-       this.householdPurchasesPoints;
+       this.purchasesPoints; 
        
   }
 

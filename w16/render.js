@@ -58,19 +58,20 @@ const renderTblBtn = (obj, index, data) => {
   td.appendChild(btnDel);
   btnDel.addEventListener("click", (e) => {
     onUpdate(index, data);
-  });
+  })
 
   btnEdit.addEventListener("click", (e) => {
-    FORM[1].value = obj.first;
-    FORM[2].value = obj.last;
-    FORM[3].value = obj.houseMembers;
-    FORM[4].value = obj.houseSize;
-    FORM[5].value = obj.foodChoice;
-    FORM[6].value = obj.foodSource;
-    FORM[7].value = obj.waterConsumPoints.toString();
-    FORM.householdPurchases.value = obj.householdPurchasesPoints.toString();
-    onUpdate(index, data);
-  });
+   FORM.firstName.value = obj.first;
+   FORM.lastName.value = obj.last;
+   FORM.housem.value = obj.houseMembers;
+   FORM.houses.value = obj.houseSize;
+   FORM.food.value = obj.foodChoice;
+   FORM.foodSource.value = obj.foodSource;
+   FORM.water.value = obj.waterValue;
+   FORM.dish_washer.checked = obj.both;
+   FORM.purchases.value = obj.purchasesPoints;
+   onUpdate(index, data);
+});
   return td;
 };
 const renderTblBody = (data) => {

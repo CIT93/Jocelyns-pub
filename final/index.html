@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Snack Selector</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <h1>Pet Snack Selector</h1>
+
+    <form id="petForm">
+      <label for="name">Pet Name:</label>
+      <input type="text" id="name" required />
+
+      <div>
+        <label for="mood">Mood:</label>
+        <select id="mood" required>
+          <option value="Hungry">Hungry</option>
+          <option value="Happy">Happy</option>
+          <option value="Playful">Playful</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="isTreatTime">Treat Time?</label>
+        <select id="isTreatTime" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="size">Pet Size:</label>
+        <select id="size" required>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="age">Pet Age (in years):</label>
+        <input type="number" id="age" required />
+      </div>
+
+      <button type="submit">Add Pet</button>
+    </form>
+
+    <div id="error-message" style="display: none; color: red"></div>
+
+    <table id="petsTable" style="display: none">
+      <thead>
+        <tr>
+          <th>Pet Name</th>
+          <th>Mood</th>
+          <th>Treat Time</th>
+          <th>Size</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="petsTableBody"></tbody>
+    </table>
+  </body>
+</html>
